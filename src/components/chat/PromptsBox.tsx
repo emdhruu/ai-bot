@@ -32,30 +32,33 @@ const PromptsBox = () => {
         alt="icon"
         className="bg-slate-50 rounded-xl p-1.5"
       />
-      <span className="text-3xl text-center mt-4">
+      <span className="text-3xl text-center mt-4 bg-gradient-to-r from-black via-purple-600 to-pink-500 bg-clip-text text-transparent">
         Let's chat! What's on your mind?
       </span>
       <p className="text-center text-gray-700 mt-2">
         Choose from the prompts below or start asking queries. I'm here to help
         with whatever you need.
       </p>
-      <div className="mt-0 lg:mt-8 w-full p-4">
-        <p className="mb-2 text-center">Try these prompts:</p>
 
-        {/* Show only first 2 buttons by default */}
+      <div className="mt-0 lg:mt-8 w-full p-4">
+        <p className="mb-2 text-center text-base font-medium text-gray-700 tracking-wide">
+          Try these prompts:
+        </p>
+
+        {/* Show only first 4 buttons by default */}
         <div className="grid grid-cols-1 gap-4 sm:hidden">
           {prompts.slice(0, 2).map((val, i) => (
             <button
               key={i}
               onClick={() => setInput(val.text)}
-              className="p-2 w-full text-center rounded-2xl border border-slate-300 shadow"
+              className="p-2 w-full text-center rounded-2xl border border-slate-300 shadow  hover:cursor-pointer"
             >
               {val.text}
             </button>
           ))}
         </div>
 
-        {/* Show all 4 buttons on sm screens */}
+        {/* Show all 2 buttons on sm screens */}
         <div className="hidden sm:grid sm:grid-cols-2 gap-4">
           {prompts.map((val, i) => (
             <button
