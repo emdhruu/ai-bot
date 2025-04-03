@@ -6,7 +6,7 @@ import {
   PromptInputActions,
   PromptInputTextarea,
 } from "@/components/ui/prompt-input";
-import { useChatStore } from "@/store/ChatState";
+import { useChatStore } from "@/store/ChatStore";
 import { ArrowUp, Square } from "lucide-react";
 import { motion } from "framer-motion";
 import MsgContainner from "@/components/chat/MsgContainner";

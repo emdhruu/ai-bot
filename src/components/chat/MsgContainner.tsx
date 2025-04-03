@@ -1,4 +1,4 @@
-import { useChatStore } from "@/store/ChatState";
+import { useChatStore } from "@/store/ChatStore";
 import { Message, MessageAvatar, MessageContent } from "../ui/message";
 import { Loader } from "../ui/loader";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
@@ -21,9 +21,7 @@ function MsgContainer() {
           </div>
           <div className="flex flex-col items-start space-y-1.5">
             <span className="text-base text-slate-600">You</span>
-            <MessageContent className="bg-slate-100 ">
-              {input}
-            </MessageContent>
+            <MessageContent className="bg-slate-100 ">{input}</MessageContent>
           </div>
         </Message>
       )}
@@ -32,7 +30,9 @@ function MsgContainer() {
         <Message className="justify-start">
           <MessageAvatar src={icon} alt="AI" fallback="AI" />
           <div className="flex flex-col items-start space-y-1.5">
-            <span className=" font-light text-slate-800 text-2xl ">Chat BOT</span>
+            <span className=" font-light text-slate-800 text-2xl ">
+              Chat BOT
+            </span>
             <MessageContent
               markdown={true}
               className="prose prose-h2:mt-2 prose-h2:scroll-mt-4 text-start text-gray-800 leading-relaxed tracking-wide max-w-2xl mx-auto p-4 bg-gray-100 rounded-lg shadow-md"

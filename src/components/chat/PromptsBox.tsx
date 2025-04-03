@@ -1,5 +1,5 @@
 import message from "@/assets/message.png";
-import { useChatStore } from "@/store/ChatState";
+import { useChatStore } from "@/store/ChatStore";
 
 const PromptsBox = () => {
   const prompts = [
