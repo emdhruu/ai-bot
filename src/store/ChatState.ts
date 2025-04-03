@@ -42,7 +42,7 @@ export const useChatStore = create<ChatState>((set) => ({
         {
           headers: {
             "Content-Type": "application/json",
-            "x-api-key": "kdjg_2uj5QqJX26hr0ABTxbeoBHqzMQHqqziDf9WYhv1vY",
+            "x-api-key": import.meta.env.API_SECRET_KEY,
           },
         }
       );
