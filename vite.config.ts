@@ -5,6 +5,11 @@ import path from "path";
 
 // https://vite.dev/config/
 export default defineConfig({
+  server: {
+    proxy: {
+      "/api": "https://api.kidjig.com/provider",
+    },
+  },
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
