@@ -1,9 +1,9 @@
 import { create } from "zustand";
 import axios from "axios";
 
-const BASE_URL = import.meta.env.DEV
-  ? "/api"
-  : "https://api.kidjig.com/provider";
+// const BASE_URL = import.meta.env.DEV
+//   ? "/api"
+//   : "https://api.kidjig.com/provider";
 
 interface ChatState {
   input: string;
