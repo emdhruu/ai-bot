@@ -1,3 +1,4 @@
+// vite.config.ts
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
@@ -7,7 +8,11 @@ import path from "path";
 export default defineConfig({
   server: {
     proxy: {
-      "/api": "https://api.kidjig.com/provider",
+      "/api": {
+        target: "https://api.kidjig.com/provider",
+        changeOrigin: true,
+        secure: false,
+      },
     },
   },
   plugins: [react(), tailwindcss()],
