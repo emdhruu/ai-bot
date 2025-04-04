@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import Home from "./page/Home";
+import LandingPage from "./page/LandingPage";
 import Chat from "./page/Chat";
 import NotFound from "./page/NotFound";
 
@@ -8,7 +8,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home />,
+      element: <LandingPage />,
     },
     {
       path: "/chat",
