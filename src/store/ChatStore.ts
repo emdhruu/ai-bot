@@ -1,10 +1,6 @@
 import { create } from "zustand";
 import axios from "axios";
 
-// const BASE_URL = import.meta.env.DEV
-//   ? "/api"
-//   : "https://api.kidjig.com/provider";
-
 interface ChatState {
   input: string;
   isRequesting: boolean;
@@ -38,7 +34,7 @@ export const useChatStore = create<ChatState>((set) => ({
 
     try {
       const { data } = await axios.post(
-        `https://cors-anywhere.herokuapp.com/https://api.kidjig.com/provider/v1/openai/chat/completions`,
+        "/api",
         {
           model: "gpt-4o-mini",
           prompt: message,
