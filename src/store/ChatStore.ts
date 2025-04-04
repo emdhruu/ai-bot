@@ -38,7 +38,7 @@ export const useChatStore = create<ChatState>((set) => ({
 
     try {
       const { data } = await axios.post(
-        `${BASE_URL}/v1/openai/chat/completions`,
+        `https://cors-anywhere.herokuapp.com/https://api.kidjig.com/provider/v1/openai/chat/completions`,
         {
           model: "gpt-4o-mini",
           prompt: message,
