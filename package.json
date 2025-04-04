@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "proxy": "https://api.kidjig.com/provider",
+  "proxy": "https://api.kidjig.com/provider/v1/openai/chat/completions",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
