@@ -34,7 +34,7 @@ export const useChatStore = create<ChatState>((set) => ({
 
     try {
       const { data } = await axios.post(
-        "/api/v1/openai/chat/completions",
+        "/api/api/v1/openai/chat/completions",
         {
           model: "gpt-4o-mini",
           prompt: message,

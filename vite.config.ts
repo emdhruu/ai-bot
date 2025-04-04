@@ -12,6 +12,7 @@ export default defineConfig({
         target: "https://api.kidjig.com/provider",
         changeOrigin: true,
         secure: false,
+        rewrite: (path) => path.replace(/^\/api/, ""),
       },
     },
   },
