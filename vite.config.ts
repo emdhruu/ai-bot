@@ -10,9 +10,9 @@ export default defineConfig({
     proxy: {
       "/api": {
         target:
-          "https://api.kidjig.com/provider/api/v1/openai/chat/completions",
+          "https://api.kidjig.com/provider/api/",
         changeOrigin: true,
-        secure: false,
+        secure: true,
         rewrite: (path) => path.replace(/^\/api/, " "),
       },
     },
