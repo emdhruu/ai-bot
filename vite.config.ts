@@ -10,7 +10,7 @@ export default defineConfig({
     proxy: {
       "/api": {
         target:
-          "https://api.kidjig.com/provider/api/",
+          "https://apivultra2.kidjig.com/api",
         changeOrigin: true,
         secure: true,
         rewrite: (path) => path.replace(/^\/api/, " "),
