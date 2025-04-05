@@ -34,7 +34,7 @@ export const useChatStore = create<ChatState>((set) => ({
 
     try {
       const { data } = await axios.post(
-        `https://apivultra2.kidjig.com`,
+        `https://apivultra2.kidjig.com/provider/api/v1/openai/chat/completions`,
         {
           model: "gpt-4o-mini",
           prompt: message,
